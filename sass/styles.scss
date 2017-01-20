@@ -18,7 +18,7 @@ $color-base:rgb(242, 78, 78);
 @mixin section {
     padding:0;
     position: relative;
-    height:100vh;
+    min-height:100vh;
     padding-left: 2%;
     display: flex;
     flex-direction: column;
@@ -63,8 +63,27 @@ h4 {
     font-weight: 100;
     margin:0;
 }
+h5 {
+    @include fontsize(18px,$document-fontsize);
+    
+    font-weight: 100;
+    margin:0;
+}
 p {
     @include fontsize(15px,$document-fontsize);
+}
+
+.btn-a {
+    @include button;
+    border: 1px solid $color-base;
+    border-radius:25px;
+    background: $color-base;
+    z-index: 1;
+    @include fontsize(14px,$document-fontsize); 
+
+    &:hover{
+        background: linear-gradient(to right, darken($color-base,6%), darken($color-base,4%));;
+    }
 }
 
 header{
@@ -179,18 +198,6 @@ header{
         flex-basis: 25%;
     }
     
-    .btn-a {
-        @include button;
-        border: 1px solid $color-base;
-        border-radius:25px;
-        background: $color-base;
-        z-index: 1;
-        @include fontsize(14px,$document-fontsize); 
-
-        &:hover{
-            background: linear-gradient(to right, darken($color-base,6%), darken($color-base,4%));;
-        }
-    }
 }
 
 .section2 {
@@ -237,6 +244,81 @@ header{
     i{
         color:$color-base;
         margin-bottom: 4%;
+        transition: all 0.2s linear;
+        &:hover{
+            transform: scale(0.9,0.9);
+        }
+    }
+}
+
+.section3 {
+    @include section;
+    flex-direction: row;
+    background-color: #0e0e0e;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 0;
+    padding-top: 2%;
+    .platform-img{
+        width: 50%;
+        height:100%;
+    }
+    .platform-info-container{
+        display: flex;
+        margin-left: 1%;
+        margin-top: 4%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    p{
+        width:95%;
+        margin-bottom: 5%;
+    }
+    h5{
+        font-size: 1.5em;
+        font-weight: 400;
+    }
+    
+    .btn-a {
+        margin-top: 7%;
+        margin-bottom: 5%;
+    }
+    
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+button.accordion {
+    color: rgba(255,255,255,0.7);
+    background: none;
+    cursor: pointer;
+    padding: 4%;
+    width: 100%;
+    text-align: left;
+    border-top: 1px solid #eee;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.accordion.active, button.accordion:hover {
+    color: darken(rgba(255,255,255,0.7),15%);
+}
+
+/* Style the accordion panel. Note: hidden by default */
+div.panel {
+    padding:0 5%;
+    background-color: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    p {
+        color:rgba(241, 241, 241, 0.7);
+        @include fontsize(15px,$document-fontsize);
     }
 }
 
