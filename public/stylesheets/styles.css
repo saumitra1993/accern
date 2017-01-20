@@ -1,0 +1,120 @@
+html {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif; }
+
+body {
+  margin: 0;
+  color: white; }
+
+a {
+  cursor: pointer; }
+
+h1 {
+  font-size: 2.8125em;
+  margin: 0; }
+
+h2 {
+  font-size: 1.5625em;
+  font-weight: 100;
+  margin: 0; }
+
+header {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; }
+  header nav {
+    flex-basis: 45%; }
+
+.logo {
+  background-image: url("../images/accernlogosquare-4.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  height: 90px;
+  width: 200px;
+  text-indent: -9999px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 2%; }
+
+.section1 {
+  padding: 0;
+  position: relative;
+  height: 100vh;
+  padding-left: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start; }
+  .section1 p {
+    width: 40%; }
+
+.bg {
+  width: inherit;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/redlady_black.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+header ul {
+  text-align: center;
+  font-weight: 600;
+  color: white;
+  font-size: 0.875em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none; }
+  header ul li {
+    margin: 0;
+    padding: 12px;
+    transform-origin: center; }
+    header ul li:after {
+      display: block;
+      content: '';
+      border-bottom: solid 2px white;
+      transform: scaleX(0);
+      transition: transform 250ms ease-in-out; }
+    header ul li:hover:after {
+      transform: scaleX(1); }
+  header ul li:last-child {
+    align-self: flex-end; }
+  header ul .separator {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.7;
+    padding: 0; }
+
+.title-separator {
+  padding: 1%;
+  width: 23.91304%;
+  border-bottom: 5px solid #f24e4e; }
+
+.btn-a {
+  padding: 15px;
+  font-size: 1em;
+  color: white;
+  border: 1px solid #f24e4e;
+  border-radius: 25px;
+  background: #f24e4e;
+  margin-bottom: 5%; }
+
+@media screen and (max-width: 500px) {
+  .section1 {
+    align-items: center; }
+    .section1 p {
+      width: 100%; } }

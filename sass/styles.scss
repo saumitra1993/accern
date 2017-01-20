@@ -1,0 +1,169 @@
+
+$document-fontsize:16px;
+$font-color:white;
+
+
+@mixin fontsize($target, $context) {
+    font-size: #{$target/$context}em;
+}
+
+@mixin button {
+    padding:15px;
+    font-size: 1em;
+    color:$font-color;
+}
+
+html{
+    
+    font-size: $document-fontsize;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    margin:0;
+    color:$font-color;
+}
+a{
+    cursor: pointer;
+}
+
+h1 {
+    @include fontsize(45px,$document-fontsize);
+    
+    margin:0;
+}
+
+h2 {
+   @include fontsize(25px,$document-fontsize);
+    
+    font-weight: 100;
+    margin:0;
+}
+
+
+header{
+    align-items: center;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    position: absolute;
+    
+    top:0;
+    left:0;
+    width:100%;
+    nav {
+        flex-basis: 45%
+    }
+}
+.logo {
+    
+    
+    background-image: url('../images/accernlogosquare-4.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    height: 90px;
+    width: 200px;
+    text-indent: -9999px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 2%;
+}
+.section1 {
+    padding:0;
+    position: relative;
+    height:100vh;
+    padding-left: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    
+    p{
+        width:40%;
+
+    }
+}
+.bg{
+    width:inherit;
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('../images/redlady_black.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:center;
+    width:100%;
+    height:100%;
+    z-index: -1;
+    
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+header ul{
+    
+    text-align: center;
+    font-weight: 600;
+    color: $font-color;
+    @include fontsize(14px,$document-fontsize);       //mixin
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    
+    li{ 
+        margin:0;
+        padding: 12px;
+        transform-origin: center;
+
+        &:after {
+          display:block;
+          content: '';
+          border-bottom: solid 2px white;  
+          transform: scaleX(0);  
+          transition: transform 250ms ease-in-out;
+        }
+        &:hover:after { transform: scaleX(1); }
+    }
+    
+    li:last-child{
+        align-self: flex-end;
+    }
+    
+    .separator {
+
+        width: 4px;
+        height:4px;
+        border-radius: 50%;
+        background-color: white;
+        opacity: 0.7;
+        padding:0;
+    }    
+}
+
+
+.title-separator {
+    padding: 1%;
+    width: percentage(110px/460px);
+    border-bottom: 5px solid rgb(242, 78, 78);
+}
+
+.btn-a {
+    @include button;
+    border: 1px solid rgb(242, 78, 78);
+    border-radius:25px;
+    background: rgb(242, 78, 78);
+    margin-bottom: 5%;
+}
+
+
+@media screen and (max-width:500px){
+    .section1 {
+        align-items: center;
+        p {
+            width: 100%;
+        }
+    }
+}
+
+

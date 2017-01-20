@@ -1,0 +1,27 @@
+{
+  "name": "accern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saumitra1993/accern.git"
+  },
+  "author": "Saumitra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saumitra1993/accern/issues"
+  },
+  "homepage": "https://github.com/saumitra1993/accern#readme",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "method-override": "^2.3.7",
+    "node-sass": "^4.3.0",
+    "node-sass-middleware": "^0.11.0"
+  }
+}
