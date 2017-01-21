@@ -1,3 +1,15 @@
+input {
+  border-bottom: 1px solid white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: none;
+  outline: none;
+  color: white;
+  font-size: 1em; }
+  input:focus {
+    border-bottom: 2px solid white; }
+
 html {
   font-size: 16px;
   font-family: 'Poppins', sans-serif; }
@@ -43,6 +55,7 @@ p {
   color: white;
   font-weight: 600;
   cursor: pointer;
+  outline: none;
   border: 1px solid #f24e4e;
   border-radius: 25px;
   background: #f24e4e;
@@ -57,6 +70,7 @@ p {
   color: white;
   font-weight: 600;
   cursor: pointer;
+  outline: none;
   border: 1px solid white;
   border-radius: 25px;
   background: none;
@@ -65,6 +79,24 @@ p {
   .btn-b:hover {
     background: white;
     color: black; }
+
+.input-container {
+  position: relative;
+  font-size: 0.875em; }
+  .input-container input:focus ~ .floating-label {
+    top: -15px;
+    left: 0px;
+    font-size: 0.75em;
+    opacity: 1; }
+  .input-container .floating-label {
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: -2px;
+    color: white;
+    transition: 0.2s ease all; }
+    .input-container .floating-label.hide-label {
+      display: none; }
 
 header {
   align-items: center;
@@ -118,6 +150,29 @@ header {
       background-color: white;
       opacity: 0.7;
       padding: 0; }
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  width: 100%; }
+  footer .logo {
+    background-image: url("../images/accernlogosquare-4.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    height: 50px;
+    width: 150px;
+    text-indent: -9999px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 2%; }
+  footer span {
+    font-size: 0.75em; }
 
 .section1 {
   padding: 0;
@@ -290,6 +345,57 @@ header {
     margin-bottom: 5%; }
   .section4 .btn-b {
     margin-top: 5%; }
+
+.section5 {
+  padding: 0;
+  position: relative;
+  min-height: 100vh;
+  padding-left: 2%;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  position: relative;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
+  .section5 .info-container {
+    display: flex;
+    margin-left: 1%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%; }
+  .section5 button.accordion {
+    font-size: 1.125em;
+    font-weight: 400; }
+  .section5 h2 {
+    flex-basis: 10%; }
+  .section5 p {
+    flex-basis: 10%; }
+  .section5 .contact-us-form {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 40%; }
+    .section5 .contact-us-form .inline-container {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+  .section5 .input-container {
+    width: 100%; }
+  .section5 .contact-message {
+    width: 94%; }
+  .section5 .contact-inline {
+    width: 80%; }
+  .section5 .btn-a {
+    width: 20%; }
 
 /* Style the buttons that are used to open and close the accordion panel */
 button.accordion {

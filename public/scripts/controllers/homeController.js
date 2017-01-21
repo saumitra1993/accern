@@ -1,5 +1,13 @@
 angular.module("accern").controller("homeController", function($scope,appfactory,$q,$routeParams){
     
+    $scope.name = '';
+    $scope.email = '';
+    $scope.subject = '';
+    $scope.message = '';
+    
+    
+    
+    
     var acc = document.getElementsByClassName("accordion");
     console.log(acc);
     var i;

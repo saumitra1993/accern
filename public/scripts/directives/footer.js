@@ -1,4 +1,4 @@
-angular.module('accern').directive('footer', function(){
+angular.module('accern').directive('footerCustom', function(){
     return {
         restrict: 'E',
         templateUrl:'templates/footer.html',

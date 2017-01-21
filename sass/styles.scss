@@ -3,7 +3,7 @@ $document-fontsize:16px;
 $font-color:white;
 $color-base:rgb(242, 78, 78);
 
-@mixin fontsize($target, $context) {
+@mixin fontsize($target, $context:$document-fontsize) {
     font-size: #{$target/$context}em;
 }
 
@@ -13,6 +13,7 @@ $color-base:rgb(242, 78, 78);
     color:$font-color;
     font-weight: 600;
     cursor:pointer;
+    outline: none;
 }
 
 @mixin section {
@@ -38,7 +39,19 @@ $color-base:rgb(242, 78, 78);
     }
 }
 
-
+input {
+    border-bottom:1px solid white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: none;
+    outline: none;
+    &:focus{
+        border-bottom: 2px solid white;
+    }
+    color: $font-color;
+    @include fontsize(16px);
+}
 html{
     
     font-size: $document-fontsize;
@@ -54,37 +67,37 @@ a{
 }
 
 h1 {
-    @include fontsize(45px,$document-fontsize);
+    @include fontsize(45px);
     
     margin:0;
 }
 
 h2 {
-    @include fontsize(32px,$document-fontsize);
+    @include fontsize(32px);
     font-weight: 100;
     margin:0;
 }
 
 h3 {
-   @include fontsize(25px,$document-fontsize);
+   @include fontsize(25px);
     
     font-weight: 100;
     margin:0;
 }
 h4 {
-    @include fontsize(20px,$document-fontsize);
+    @include fontsize(20px);
     
     font-weight: 100;
     margin:0;
 }
 h5 {
-    @include fontsize(18px,$document-fontsize);
+    @include fontsize(18px);
     
     font-weight: 100;
     margin:0;
 }
 p {
-    @include fontsize(15px,$document-fontsize);
+    @include fontsize(15px);
 }
 
 .btn-a {
@@ -93,7 +106,7 @@ p {
     border-radius:25px;
     background: $color-base;
     z-index: 1;
-    @include fontsize(14px,$document-fontsize); 
+    @include fontsize(14px); 
 
     &:hover{
         background: linear-gradient(to right, darken($color-base,6%), darken($color-base,4%));
@@ -106,12 +119,41 @@ p {
     border-radius:25px;
     background: none;
     z-index: 1;
-    @include fontsize(14px,$document-fontsize); 
+    @include fontsize(14px); 
 
     &:hover{
         background: white;
         color:black;
     }
+}
+
+.input-container {
+    
+    position: relative;
+    @include fontsize(14px);
+    
+    input:focus ~ .floating-label{
+      top: -15px;
+      
+      left: 0px;
+      @include fontsize(12px);
+      opacity: 1;
+    }
+    
+    .floating-label {
+        position: absolute;
+        pointer-events: none;
+        left: 10px;
+        top: -2px;
+        color: white;
+        transition: 0.2s ease all;
+        
+        &.hide-label {
+            display: none;
+        }
+    }
+    
+    
 }
 
 header{
@@ -185,6 +227,40 @@ header{
         }    
     }
 
+}
+
+
+footer {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    position: absolute;
+    align-items: center;
+    bottom:0;
+    left:0;
+    width:100%;
+    
+    .logo {
+    
+
+        background-image: url('../images/accernlogosquare-4.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        height: 50px;
+        width: 150px;
+        text-indent: -9999px;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 2%;
+    }
+    span{
+        
+        @include fontsize(12px);
+    }
+    
+    
 }
 
 .section1 {
@@ -348,6 +424,66 @@ header{
         margin-top: 5%;
     }
 }
+
+
+.section5 {
+    @include section;
+    background-color: black;
+    position: relative;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+    
+    h2{
+        flex-basis: 10%;
+    }
+    p{
+        flex-basis: 10%;
+    }
+    
+    .contact-us-form {
+        
+        flex-basis: 40%;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width:70%;
+        height: 40%;
+        .inline-container{
+            width: 100%;
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            
+        }
+    }
+    .input-container {
+        width:100%;
+    }
+    .contact-message {
+        width: 94%;
+    }
+    .contact-inline {
+        width: 80%;
+    }
+    .btn-a {
+        width: 20%;
+    }
+}
+
+
+
+
+
+
+
+
 
 
 
