@@ -5,7 +5,7 @@ angular.module("accern").controller("homeController", function($scope,appfactory
     $scope.subject = '';
     $scope.message = '';
     
-    
+    $scope.title = "Home - Accern";
     
     
     var acc = document.getElementsByClassName("accordion");
