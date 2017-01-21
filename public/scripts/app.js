@@ -1,12 +1,17 @@
 angular.module('accern', ['ngRoute'])
-.config(function($routeProvider){
-  $routeProvider
-   .when('/',                                      
+.config(function($locationProvider,$routeProvider){
+    
+    $routeProvider
+    .when('/',                                      
     {controller:'homeController',
     templateUrl:'templates/home.html'})
-   
-  .otherwise({
+
+    .when('/company',                                      
+    {controller:'companyController',
+    templateUrl:'templates/company.html'})
+
+    .otherwise({
        redirectTo: '/'
-   });
+    });
 });
 
