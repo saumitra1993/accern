@@ -22,6 +22,20 @@ $color-base:rgb(242, 78, 78);
     padding-left: 2%;
     display: flex;
     flex-direction: column;
+    .info-container{
+        display: flex;
+        margin-left: 1%;
+        //margin-top: 3%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width:50%;
+    }
+    
+    button.accordion{
+        @include fontsize(18px,$document-fontsize);
+        font-weight: 400;
+    }
 }
 
 
@@ -82,7 +96,21 @@ p {
     @include fontsize(14px,$document-fontsize); 
 
     &:hover{
-        background: linear-gradient(to right, darken($color-base,6%), darken($color-base,4%));;
+        background: linear-gradient(to right, darken($color-base,6%), darken($color-base,4%));
+    }
+}
+
+.btn-b {
+    @include button;
+    border: 1px solid white;
+    border-radius:25px;
+    background: none;
+    z-index: 1;
+    @include fontsize(14px,$document-fontsize); 
+
+    &:hover{
+        background: white;
+        color:black;
     }
 }
 
@@ -90,7 +118,7 @@ header{
     align-items: center;
     display:flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     
     position: absolute;
     
@@ -98,7 +126,7 @@ header{
     left:0;
     width:100%;
     nav {
-        flex-basis: 45%
+        margin-left: auto;
     }
     
     .logo {
@@ -205,13 +233,13 @@ header{
     background-color: black;
     position: relative;
     margin-top: 50px;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
     
     p {
         width: 60%;
         text-align: center;
-        flex-basis: 20%;
+        margin-bottom: 5%;
     }
     
     .features-container{
@@ -260,33 +288,68 @@ header{
     align-items: center;
     padding-left: 0;
     padding-top: 2%;
+    padding-bottom: 2%;
     .platform-img{
         width: 50%;
         height:100%;
     }
-    .platform-info-container{
-        display: flex;
-        margin-left: 1%;
-        margin-top: 4%;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
+    
+    p{
+        width:95%;
+        //margin-bottom: 5%;
     }
+    
+    
+    .btn-a {
+        margin-top: 7%;
+        
+    }
+    
+    
+    
+    
+}
+
+.section4 {
+    @include section;
+    flex-direction: row;
+    background-color: #000000;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 0;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    .feature-img-container{
+        width: 50%;
+        height:100vh;
+        overflow: hidden;
+        text-align: center;
+        
+    }
+    .feature-img{
+        width: auto;
+        height:100%;
+        position: relative; /* allows repositioning */
+        left: 100%; /* move the whole width of the image to the right */
+        margin-left: -200%; /* magic! */
+    }
+    
+    h2{
+        width: 95%;
+    }
+    
     p{
         width:95%;
         margin-bottom: 5%;
     }
-    h5{
-        font-size: 1.5em;
-        font-weight: 400;
-    }
     
-    .btn-a {
-        margin-top: 7%;
-        margin-bottom: 5%;
+    .btn-b {
+        margin-top: 5%;
     }
-    
 }
+
+
 
 /* Style the buttons that are used to open and close the accordion panel */
 button.accordion {
@@ -296,12 +359,25 @@ button.accordion {
     padding: 4%;
     width: 100%;
     text-align: left;
-    border-top: 1px solid #eee;
+    border-top: 1px solid rgba(210,210,210,0.6);
     border-left: none;
     border-right: none;
-    border-bottom: 1px solid #eee;
+    border-bottom: none;
     outline: none;
     transition: 0.4s;
+    
+    .acc-pointer{
+        -moz-transition: all 0.2s linear;
+        -webkit-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+    }
+
+    .acc-pointer.down{
+        -ms-transform:rotate(90deg);
+        -moz-transform:rotate(90deg);
+        -webkit-transform:rotate(90deg);
+        transform:rotate(90deg);
+    }
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */

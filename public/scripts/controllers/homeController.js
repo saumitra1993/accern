@@ -18,7 +18,23 @@ angular.module("accern").controller("homeController", function($scope,appfactory
             } else {
               panel.style.maxHeight = panel.scrollHeight + 'px';
             } 
+            console.log(this.childNodes);
+            for (var j = 0; j < this.childNodes.length; j++) {
+            
+                if (this.childNodes[j].className.indexOf("fa fa-chevron-right acc-pointer") != -1) {
+                    pointer = this.childNodes[j];
+                    console.log(pointer.classList);
+                    console.log(pointer.classList.contains("down"));
+
+                    pointer.classList.toggle("down");
+                    
+                    
+                    break;
+                }        
+            }
         }
+        
+        
     }
     
     
