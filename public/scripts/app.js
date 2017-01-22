@@ -14,6 +14,10 @@ angular.module('accern', ['ngRoute'])
     .when('/resources',                                      
     {controller:'resourcesController',
     templateUrl:'templates/resources.html'})
+    
+    .when('/contact',                                      
+    {controller:'contactController',
+    templateUrl:'templates/contact.html'})
 
     .otherwise({
        redirectTo: '/'

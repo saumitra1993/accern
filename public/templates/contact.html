@@ -1,0 +1,34 @@
+<section class="pg4-section1">
+    <div class="bg"></div>
+    <h4>We're Here For You</h4>
+    <h2>Contact us any time</h2><br />
+    <h4>110 Wall Street, New York, NY 10005</h4>
+    <h4>info@accern.com</h4>
+    <div class="transitioner"></div>
+</section>
+
+<section class="pg4-section2">
+    <form class="contact-us-form">
+        <div class="inline-container">
+            <div class="input-container">
+                <input ng-model="name" type="text"  class="contact-inline" />
+                <span ng-class = "{'hide-label' : name!=''}" class="floating-label">Name</span>
+            </div>
+            
+            <div class="input-container">
+                <input ng-model="email" type="email" class="contact-inline" />
+                <span ng-class = "{'hide-label' : email!=''}" class="floating-label">Email</span>
+            </div>
+            
+            <div class="input-container">
+                <input ng-model="subject"  type="text" class="contact-inline" />
+                <span class="floating-label" ng-class = "{'hide-label': subject!=''}" >Subject</span>
+            </div>
+        </div>
+        <div class="input-container">
+            <input type="text" ng-model="message"  class="contact-message" />
+            <span class="floating-label" ng-class = "{'hide-label' : message != ''}">Message</span>
+        </div>
+        <button type="submit" class="btn-a" >Send</button>
+    </form>
+</section>

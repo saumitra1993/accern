@@ -5,6 +5,7 @@ input {
   border-right: none;
   background: none;
   outline: none;
+  float: left;
   color: white;
   font-size: 1em; }
   input:focus {
@@ -695,6 +696,100 @@ footer {
   .pg3-section2 .resource:hover .download-btn {
     opacity: 1;
     bottom: 5%; }
+
+.pg4-section1 {
+  padding: 0;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 2%;
+  flex-direction: column;
+  height: 100vh; }
+  .pg4-section1 .info-container {
+    display: flex;
+    margin-left: 1%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%; }
+  .pg4-section1 button.accordion {
+    font-size: 1.125em;
+    font-weight: 400; }
+  .pg4-section1 .transitioner {
+    width: 150%;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+    position: absolute;
+    left: -50px;
+    transform: rotate(-3deg);
+    height: 20vh;
+    bottom: -10vh; }
+  .pg4-section1 .bg {
+    width: inherit;
+    background: url("../images/contact.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: top center;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .pg4-section1 h2 {
+    font-weight: 100; }
+
+.pg4-section2 {
+  padding: 0;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  padding-top: 2%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  width: 100%; }
+  .pg4-section2 .info-container {
+    display: flex;
+    margin-left: 1%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%; }
+  .pg4-section2 button.accordion {
+    font-size: 1.125em;
+    font-weight: 400; }
+  .pg4-section2 .contact-us-form {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 40%; }
+    .pg4-section2 .contact-us-form .inline-container {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+  .pg4-section2 .input-container {
+    width: 100%; }
+  .pg4-section2 .contact-message {
+    width: 94%; }
+  .pg4-section2 .contact-inline {
+    width: 80%; }
+  .pg4-section2 .btn-a {
+    width: 20%; }
 
 button.accordion {
   color: rgba(255, 255, 255, 0.7);

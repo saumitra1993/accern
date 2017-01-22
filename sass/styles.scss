@@ -58,6 +58,7 @@ input {
     border-right: none;
     background: none;
     outline: none;
+    float: left;
     &:focus{
         border-bottom: 2px solid white;
     }
@@ -790,7 +791,85 @@ footer {
 
 
 
+.pg4-section1 {
+    
+    @include section;
+    
+    .transitioner {
+        @include transitioner;
+        transform: rotate(-3deg);
+        height:20vh;
+        bottom:-10vh;
+    }
+    
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 2%;
+    flex-direction: column;
+    height: 100vh;
+    .bg{
+        width:inherit;
+        background: url('../images/contact.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position:top center;
+        width:100%;
+        height:100%;
+        z-index: -1;
 
+        position: absolute;
+        top:0;
+        left:0;
+    }
+    h2 {
+        font-weight: 100;
+    }
+}
+
+.pg4-section2 {
+    @include section;
+    background-color: black;
+    padding-top: 2%;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    width: 100%;
+    
+    .contact-us-form {
+        
+        flex-basis: 40%;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width:90%;
+        height: 40%;
+        .inline-container{
+            width: 100%;
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            
+        }
+    }
+    .input-container {
+        width:100%;
+    }
+    .contact-message {
+        width: 94%;
+    }
+    .contact-inline {
+        width: 80%;
+    }
+    .btn-a {
+        width: 20%;
+    }
+}
 
 
 
