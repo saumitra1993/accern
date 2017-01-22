@@ -9,6 +9,11 @@ angular.module('accern', ['ngRoute'])
     .when('/company',                                      
     {controller:'companyController',
     templateUrl:'templates/company.html'})
+    
+    
+    .when('/resources',                                      
+    {controller:'resourcesController',
+    templateUrl:'templates/resources.html'})
 
     .otherwise({
        redirectTo: '/'
