@@ -68,17 +68,17 @@ $color-base:rgb(242, 78, 78);
         @include fontsize(20px);
     }
     
-    .resources-container {
+    .resources {
         display: flex;
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
         width: 96%;
         align-items:stretch;
-        height: 35vh;
+        height: 40vh;
     }
     
-    .resources-container:last-child {
+    .container2 {
         margin-bottom: 10%;
     }
     
@@ -280,6 +280,9 @@ p {
         justify-content: space-between;
 
     }
+    .btn-a {
+        width: 20%;
+    }
 }
 .input-container {
     width:100%;
@@ -290,9 +293,7 @@ p {
 .contact-inline {
     width: 80%;
 }
-.btn-a {
-    width: 20%;
-}
+
 
 header{
     align-items: center;
@@ -701,22 +702,22 @@ footer {
     
     .process{
         margin-top: 5%;
-        height:50%;
+        height:40%;
         width:80%;
         text-align: center;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        
     }
     .step-container{
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content:center;
         align-items: center;
         margin-left: 2%;
         margin-right: 2%;
+        height:100%;
     }
     
     .process-step{
@@ -752,6 +753,12 @@ footer {
     
     }
     
+    .process-head {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 80%;
+    }
     
     .line{
         width: 5%;
@@ -760,6 +767,10 @@ footer {
     
     h5 {
         font-weight: 600;
+    }
+    
+    h6 {
+        @include fontsize(16px);
     }
     
 }
@@ -772,6 +783,15 @@ footer {
     .partner-logo {
         width:200px;
         height: auto;
+    }
+    
+    .container2 {
+        .resource:nth-child(2n) {
+            background-color: #181818;
+        }
+        .resource:nth-child(2n-1){
+            background-color: #202020;
+        }
     }
     
 }

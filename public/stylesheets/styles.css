@@ -131,6 +131,8 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
+  .contact-us-form .btn-a {
+    width: 20%; }
 
 .input-container {
   width: 100%; }
@@ -140,9 +142,6 @@ p {
 
 .contact-inline {
   width: 80%; }
-
-.btn-a {
-  width: 20%; }
 
 header {
   align-items: center;
@@ -556,7 +555,7 @@ footer {
     font-weight: 400; }
   .pg2-section3 .process {
     margin-top: 5%;
-    height: 50%;
+    height: 40%;
     width: 80%;
     text-align: center;
     display: flex;
@@ -566,10 +565,11 @@ footer {
   .pg2-section3 .step-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     margin-left: 2%;
-    margin-right: 2%; }
+    margin-right: 2%;
+    height: 100%; }
   .pg2-section3 .process-step {
     border: 2px solid #f24e4e;
     border-radius: 50%;
@@ -585,11 +585,18 @@ footer {
   .pg2-section3 .step34 {
     height: 20vh;
     width: 20vh; }
+  .pg2-section3 .process-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%; }
   .pg2-section3 .line {
     width: 5%;
     border-bottom: 1px dashed white; }
   .pg2-section3 h5 {
     font-weight: 600; }
+  .pg2-section3 h6 {
+    font-size: 1em; }
 
 .pg2-section4 {
   padding: 0;
@@ -627,15 +634,15 @@ footer {
   .pg2-section4 a {
     font-weight: 400;
     font-size: 1.25em; }
-  .pg2-section4 .resources-container {
+  .pg2-section4 .resources {
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     width: 96%;
     align-items: stretch;
-    height: 35vh; }
-  .pg2-section4 .resources-container:last-child {
+    height: 40vh; }
+  .pg2-section4 .container2 {
     margin-bottom: 10%; }
   .pg2-section4 .resource {
     height: 100%;
@@ -664,6 +671,10 @@ footer {
   .pg2-section4 .partner-logo {
     width: 200px;
     height: auto; }
+  .pg2-section4 .container2 .resource:nth-child(2n) {
+    background-color: #181818; }
+  .pg2-section4 .container2 .resource:nth-child(2n-1) {
+    background-color: #202020; }
 
 .pg3-section1 {
   padding: 0;
@@ -751,15 +762,15 @@ footer {
   .pg3-section2 a {
     font-weight: 400;
     font-size: 1.25em; }
-  .pg3-section2 .resources-container {
+  .pg3-section2 .resources {
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     width: 96%;
     align-items: stretch;
-    height: 35vh; }
-  .pg3-section2 .resources-container:last-child {
+    height: 40vh; }
+  .pg3-section2 .container2 {
     margin-bottom: 10%; }
   .pg3-section2 .resource {
     height: 100%;
