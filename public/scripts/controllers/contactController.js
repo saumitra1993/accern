@@ -2,10 +2,5 @@ angular.module("accern").controller("contactController", function($scope,appfact
     
     
     
-    $scope.name = '';
-    $scope.email = '';
-    $scope.subject = '';
-    $scope.message = '';
-    
     
 });
