@@ -5,7 +5,7 @@ angular.module("accern").controller("navController", function($scope,appfactory,
     $scope.$on('out-of-view',function(event,inview){
 
     	$scope.putBackground = !inview;
-    	console.log(inview);
+    	//console.log(inview);
     });
     
 });

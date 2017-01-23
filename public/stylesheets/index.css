@@ -857,7 +857,9 @@ div.panel {
     width: 90%;
     flex-basis: 30%; }
   .pg1-section5 .btn-a {
-    width: 30%; } }
+    width: 30%; }
+  .pg2-section1 h1 {
+    text-align: center; } }
 
 @media screen and (max-width: 680px) {
   ul.topnav li {

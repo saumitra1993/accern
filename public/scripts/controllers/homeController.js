@@ -1,12 +1,11 @@
-angular.module("accern").controller("homeController", function($scope,appfactory,$q,$routeParams){
+angular.module("accern").controller("homeController", function($scope,appfactory,$q,$routeParams,$window){
     
    $scope.visibilityChange = function(inview){
         
         $scope.$emit('section-out-of-view',inview);
         
    }; 
-    
-    
+        
     var acc = document.getElementsByClassName("accordion");
     console.log(acc);
     var i;
