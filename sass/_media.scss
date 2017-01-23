@@ -70,7 +70,11 @@
             width: 30%;
         }
     }
+    
+    
 }
+
+
 
 @media screen and (max-width:680px) {
     ul.topnav li {display: none;}
@@ -88,19 +92,66 @@
 
 @media screen and (max-width:680px) {
   
-  ul.topnav.responsive {
-      
+    ul.topnav.responsive {
+
       li {
           background-color: black;
           width: 100%;
           display: block;
           float: none;
       }
-  }
-  ul.topnav.responsive li a {
-    display: block;
-    text-align: center;
-  }
+    }
+    ul.topnav.responsive li a {
+        display: block;
+        text-align: center;
+    }
+    
+    .pg3-section2 {
+        p {
+            width: 95%;
+        }
+        
+        .resources {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-wrap:wrap;
+        }
+        .resource {
+            width: 80%;
+            height: 20vh;
+            
+        }
+        .resources:last-child {
+            margin-bottom: 10%;
+        }
+        
+        .download-btn {
+            position: absolute;
+            bottom: 5%;
+            text-align: center;
+            opacity: 1;
+            @include fontsize(14px);
+        }
+    }
+    
+    .pg4-section1 {
+        align-items: center;
+    }
+    
+    .contact-us-form {
+        .inline-container {
+            flex-direction: column;
+            height:50%;
+            
+        }
+        .btn-a {
+            width: 50%;
+        }
+        .contact-inline {
+            width: 94%;
+        }
+    }
 
     
 }
