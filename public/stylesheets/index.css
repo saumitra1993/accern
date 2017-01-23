@@ -197,6 +197,68 @@ header {
       opacity: 0.7;
       padding: 0; }
 
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.7); }
+  footer .logo {
+    background-image: url("../images/accernlogosquare-4.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    height: 50px;
+    width: 150px;
+    text-indent: -9999px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 2%; }
+  footer span {
+    margin-right: 3%;
+    font-size: 0.75em; }
+
+button.accordion {
+  color: rgba(255, 255, 255, 0.7);
+  background: none;
+  cursor: pointer;
+  padding: 4%;
+  width: 100%;
+  text-align: left;
+  border-top: 1px solid rgba(210, 210, 210, 0.6);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  outline: none;
+  transition: 0.4s; }
+  button.accordion .acc-pointer {
+    -moz-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear; }
+  button.accordion .acc-pointer.down {
+    -ms-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg); }
+
+button.accordion.active, button.accordion:hover {
+  color: rgba(217, 217, 217, 0.7); }
+
+div.panel {
+  padding: 0 5%;
+  background-color: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out; }
+  div.panel p {
+    color: rgba(241, 241, 241, 0.7);
+    font-size: 0.9375em; }
+
 .pg1-section1 {
   padding: 0;
   position: relative;
@@ -383,7 +445,6 @@ header {
   flex-direction: column;
   background-color: black;
   padding-top: 2%;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh; }
@@ -405,32 +466,6 @@ header {
     width: 70%;
     flex-basis: 50%; }
 
-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  z-index: 10;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  color: rgba(255, 255, 255, 0.7); }
-  footer .logo {
-    background-image: url("../images/accernlogosquare-4.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: block;
-    height: 50px;
-    width: 150px;
-    text-indent: -9999px;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 2%; }
-  footer span {
-    margin-right: 3%;
-    font-size: 0.75em; }
-
 .pg2-section1 {
   padding: 0;
   position: relative;
@@ -439,7 +474,6 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   height: 100vh; }
   .pg2-section1 .info-container {
     display: flex;
@@ -535,7 +569,6 @@ footer {
   flex-direction: column;
   background-color: #0e0e0e;
   padding-top: 2%;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -633,16 +666,20 @@ footer {
   .pg2-section4 a {
     font-weight: 400;
     font-size: 1.25em; }
+  .pg2-section4 .resources-container {
+    width: 96%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; }
   .pg2-section4 .resources {
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    width: 96%;
-    align-items: stretch;
-    height: 40vh; }
-  .pg2-section4 .container2 {
-    margin-bottom: 10%; }
+    height: 100%;
+    width: 100%;
+    align-items: stretch; }
   .pg2-section4 .resource {
     height: 100%;
     width: 25%;
@@ -652,28 +689,32 @@ footer {
     flex-wrap: wrap;
     align-items: center;
     position: relative; }
-  .pg2-section4 .resource:nth-child(2n-1) {
+  .pg2-section4 .resources-container:last-child {
+    margin-bottom: 10%; }
+  .pg2-section4 .resources-container:nth-child(2n-1) .resource:nth-child(2n-1) {
     background-color: #181818; }
-  .pg2-section4 .resource:nth-child(2n) {
+  .pg2-section4 .resources-container:nth-child(2n-1) .resource:nth-child(2n) {
     background-color: #202020; }
+  .pg2-section4 .resources-container:nth-child(2n-1) .resource:hover {
+    background-color: #f24e4e; }
+  .pg2-section4 .resources-container:nth-child(2n) .resource:nth-child(2n) {
+    background-color: #181818; }
+  .pg2-section4 .resources-container:nth-child(2n) .resource:nth-child(2n-1) {
+    background-color: #202020; }
+  .pg2-section4 .resources-container:nth-child(2n) .resource:hover {
+    background-color: #f24e4e; }
   .pg2-section4 .download-btn {
     position: absolute;
     bottom: -2px;
     text-align: center;
     opacity: 0;
     transition: all 0.2s ease-in; }
-  .pg2-section4 .resource:hover {
-    background: #f24e4e; }
   .pg2-section4 .resource:hover .download-btn {
     opacity: 1;
     bottom: 5%; }
   .pg2-section4 .partner-logo {
     width: 200px;
     height: auto; }
-  .pg2-section4 .container2 .resource:nth-child(2n) {
-    background-color: #181818; }
-  .pg2-section4 .container2 .resource:nth-child(2n-1) {
-    background-color: #202020; }
 
 .pg3-section1 {
   padding: 0;
@@ -761,16 +802,20 @@ footer {
   .pg3-section2 a {
     font-weight: 400;
     font-size: 1.25em; }
+  .pg3-section2 .resources-container {
+    width: 96%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; }
   .pg3-section2 .resources {
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    width: 96%;
-    align-items: stretch;
-    height: 40vh; }
-  .pg3-section2 .container2 {
-    margin-bottom: 10%; }
+    height: 100%;
+    width: 100%;
+    align-items: stretch; }
   .pg3-section2 .resource {
     height: 100%;
     width: 25%;
@@ -780,18 +825,26 @@ footer {
     flex-wrap: wrap;
     align-items: center;
     position: relative; }
-  .pg3-section2 .resource:nth-child(2n-1) {
+  .pg3-section2 .resources-container:last-child {
+    margin-bottom: 10%; }
+  .pg3-section2 .resources-container:nth-child(2n-1) .resource:nth-child(2n-1) {
     background-color: #181818; }
-  .pg3-section2 .resource:nth-child(2n) {
+  .pg3-section2 .resources-container:nth-child(2n-1) .resource:nth-child(2n) {
     background-color: #202020; }
+  .pg3-section2 .resources-container:nth-child(2n-1) .resource:hover {
+    background-color: #f24e4e; }
+  .pg3-section2 .resources-container:nth-child(2n) .resource:nth-child(2n) {
+    background-color: #181818; }
+  .pg3-section2 .resources-container:nth-child(2n) .resource:nth-child(2n-1) {
+    background-color: #202020; }
+  .pg3-section2 .resources-container:nth-child(2n) .resource:hover {
+    background-color: #f24e4e; }
   .pg3-section2 .download-btn {
     position: absolute;
     bottom: -2px;
     text-align: center;
     opacity: 0;
     transition: all 0.2s ease-in; }
-  .pg3-section2 .resource:hover {
-    background: #f24e4e; }
   .pg3-section2 .resource:hover .download-btn {
     opacity: 1;
     bottom: 5%; }
@@ -871,44 +924,6 @@ footer {
   .pg4-section2 contactus-form {
     width: 90%;
     flex-basis: 50%; }
-
-button.accordion {
-  color: rgba(255, 255, 255, 0.7);
-  background: none;
-  cursor: pointer;
-  padding: 4%;
-  width: 100%;
-  text-align: left;
-  border-top: 1px solid rgba(210, 210, 210, 0.6);
-  border-left: none;
-  border-right: none;
-  border-bottom: none;
-  outline: none;
-  transition: 0.4s; }
-  button.accordion .acc-pointer {
-    -moz-transition: all 0.2s linear;
-    -webkit-transition: all 0.2s linear;
-    transition: all 0.2s linear; }
-  button.accordion .acc-pointer.down {
-    -ms-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg); }
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-button.accordion.active, button.accordion:hover {
-  color: rgba(217, 217, 217, 0.7); }
-
-/* Style the accordion panel. Note: hidden by default */
-div.panel {
-  padding: 0 5%;
-  background-color: none;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out; }
-  div.panel p {
-    color: rgba(241, 241, 241, 0.7);
-    font-size: 0.9375em; }
 
 @media screen and (max-width: 500px) {
   .pg1-section1 {

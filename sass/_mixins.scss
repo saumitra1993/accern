@@ -1,0 +1,152 @@
+
+@mixin fontsize($target, $context:$document-fontsize) {
+    font-size: #{$target/$context}em;
+}
+
+@mixin button {
+    padding:15px 25px 15px 25px;
+    font-size: 1em;
+    color:$font-color;
+    font-weight: 600;
+    cursor:pointer;
+    outline: none;
+}
+
+@mixin section {
+    padding:0;
+    position: relative;
+    min-height:100vh;
+    
+    display: flex;
+    flex-direction: column;
+    .info-container{
+        display: flex;
+        margin-left: 1%;
+        //margin-top: 3%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width:50%;
+    }
+    
+    button.accordion{
+        @include fontsize(18px,$document-fontsize);
+        font-weight: 400;
+    }
+}
+
+@mixin boxed-section {
+    
+    @include section;
+    background-color: black;
+    padding-top: 2%;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    flex-grow: 1;
+    
+    p{
+        color: rgba(255,255,255,0.7);
+        width: 70%;
+        margin-bottom: 8%;
+    }
+    h2 {
+        font-weight: 100;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    
+    a {
+        font-weight: 400;
+        @include fontsize(20px);
+    }
+    
+    .resources-container {
+        width: 96%;
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    .resources {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 100%;
+        width:100%;
+        align-items:stretch;
+        
+    }
+    
+    
+    
+    .resource {
+        height: 100%;
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        position: relative;
+    }
+    
+    
+    .resources-container:last-child {
+        margin-bottom: 10%;
+    }
+    
+    .resources-container:nth-child(2n-1) {
+        .resource:nth-child(2n-1) {
+            background-color: #181818;
+        }
+        .resource:nth-child(2n){
+            background-color: #202020;
+        }
+        .resource:hover {
+            background-color: $color-base;
+        }
+    }
+    
+    .resources-container:nth-child(2n){
+        .resource:nth-child(2n) {
+            background-color: #181818;
+        }
+        .resource:nth-child(2n-1){
+            background-color: #202020;
+        }
+        .resource:hover {
+            background-color: $color-base;
+        }
+    }
+    
+    .download-btn {
+        position: absolute;
+        bottom: -2px;
+        text-align: center;
+        opacity: 0;
+        transition: all 0.2s ease-in;
+    }
+    
+    
+    .resource:hover .download-btn {
+        opacity: 1;
+        bottom:5%;
+    }
+}
+
+@mixin transitioner{
+
+    width:150%;
+    background-color: black;
+    margin:0;
+    padding:0;
+    z-index:-1;
+    position: absolute;
+    left: -50px;
+}

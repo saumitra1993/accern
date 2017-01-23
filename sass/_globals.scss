@@ -1,0 +1,324 @@
+input {
+    border-bottom:1px solid white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: none;
+    outline: none;
+    float: left;
+    &:focus{
+        border-bottom: 2px solid white;
+    }
+    color: $font-color;
+    @include fontsize(16px);
+}
+html{
+    font-size: $document-fontsize;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    margin:0;
+    color:$font-color;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color:$font-color;
+}
+
+h1 {
+    @include fontsize(45px);
+    
+    margin:0;
+}
+
+h2 {
+    @include fontsize(32px);
+    font-weight: 100;
+    margin:0;
+}
+
+h3 {
+   @include fontsize(25px);
+    
+    font-weight: 100;
+    margin:0;
+}
+h4 {
+    @include fontsize(20px);
+    
+    font-weight: 100;
+    margin:0;
+}
+h5 {
+    @include fontsize(18px);
+    
+    font-weight: 100;
+    margin:0;
+}
+p {
+    @include fontsize(15px);
+}
+
+.btn-a {
+    @include button;
+    border: 1px solid $color-base;
+    border-radius:25px;
+    background: $color-base;
+    z-index: 1;
+    @include fontsize(14px); 
+
+    &:hover{
+        background: linear-gradient(to right, darken($color-base,6%), darken($color-base,4%));
+    }
+}
+
+.btn-b {
+    @include button;
+    border: 1px solid white;
+    border-radius:25px;
+    background: none;
+    z-index: 1;
+    @include fontsize(14px); 
+
+    &:hover{
+        background: white;
+        color:black;
+    }
+}
+
+.btn-c {
+    @include button;
+    border: 1px solid $color-base;
+    color:$color-base;
+    border-radius:25px;
+    background: none;
+    z-index: 1;
+    @include fontsize(14px); 
+
+    &:hover{
+        background: $color-base;
+        color:white;
+    }
+}
+
+.input-container {
+    
+    position: relative;
+    @include fontsize(14px);
+    
+    input:focus ~ .floating-label{
+      top: -15px;
+      
+      left: 0px;
+      @include fontsize(12px);
+      opacity: 1;
+    }
+    
+    .floating-label {
+        position: absolute;
+        pointer-events: none;
+        left: 10px;
+        top: -2px;
+        color: white;
+        transition: 0.2s ease all;
+        
+        &.hide-label {
+            display: none;
+        }
+    }
+    
+    
+}
+
+.contact-us-form {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height:100%;
+    .inline-container{
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+    .btn-a {
+        width: 20%;
+    }
+}
+.input-container {
+    width:100%;
+}
+.contact-message {
+    width: 94%;
+}
+.contact-inline {
+    width: 80%;
+}
+
+
+header{
+    align-items: center;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+    position: absolute;
+    
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1;
+    nav {
+        margin-left: auto;
+        
+    }
+    
+    .logo {
+    
+
+        background-image: url('../images/accernlogosquare-4.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        height: 90px;
+        width: 200px;
+        text-indent: -9999px;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 2%;
+    }
+    ul{
+    
+        text-align: center;
+        font-weight: 600;
+        color: $font-color;
+        @include fontsize(14px,$document-fontsize);       //mixin
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+
+        li{ 
+            margin:0;
+            padding: 12px;
+            transform-origin: center;
+
+            &:after {
+              display:block;
+              content: '';
+              border-bottom: solid 2px white;  
+              transform: scaleX(0);  
+              transition: transform 250ms ease-in-out;
+            }
+            &:hover:after { transform: scaleX(1); }
+        }
+
+        li:last-child{
+            margin-right: 1%;
+        }
+
+        .separator {
+
+            width: 4px;
+            height:4px;
+            border-radius: 50%;
+            background-color: white;
+            opacity: 0.7;
+            padding:0;
+        }    
+    }
+    
+
+}
+
+
+footer {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    
+    align-items: center;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: rgba(255,255,255,0.7);
+    
+    .logo {
+    
+
+        background-image: url('../images/accernlogosquare-4.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        height: 50px;
+        width: 150px;
+        text-indent: -9999px;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 2%;
+    }
+    span{
+        margin-right: 3%;
+        @include fontsize(12px);
+    }
+    
+    
+}
+
+button.accordion {
+    color: rgba(255,255,255,0.7);
+    background: none;
+    cursor: pointer;
+    padding: 4%;
+    width: 100%;
+    text-align: left;
+    border-top: 1px solid rgba(210,210,210,0.6);
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    outline: none;
+    transition: 0.4s;
+    
+    .acc-pointer{
+        -moz-transition: all 0.2s linear;
+        -webkit-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+    }
+
+    .acc-pointer.down{
+        -ms-transform:rotate(90deg);
+        -moz-transform:rotate(90deg);
+        -webkit-transform:rotate(90deg);
+        transform:rotate(90deg);
+    }
+}
+
+
+button.accordion.active, button.accordion:hover {
+    color: darken(rgba(255,255,255,0.7),15%);
+}
+
+div.panel {
+    padding:0 5%;
+    background-color: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    p {
+        color:rgba(241, 241, 241, 0.7);
+        @include fontsize(15px,$document-fontsize);
+    }
+}
+
+
