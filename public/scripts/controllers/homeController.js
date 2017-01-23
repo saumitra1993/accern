@@ -1,14 +1,10 @@
 angular.module("accern").controller("homeController", function($scope,appfactory,$q,$routeParams){
     
-    $scope.name = '';
-    $scope.email = '';
-    $scope.subject = '';
-    $scope.message = '';
-    
-    
-    
-    
-    
+   $scope.visibilityChange = function(inview){
+        
+        $scope.$emit('section-out-of-view',inview);
+        
+   }; 
     
     
     var acc = document.getElementsByClassName("accordion");

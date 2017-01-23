@@ -2,6 +2,10 @@ angular.module("accern").controller("navController", function($scope,appfactory,
     
     $scope.setResponsive = false;
     
-    
+    $scope.$on('out-of-view',function(event,inview){
+
+    	$scope.putBackground = !inview;
+    	console.log(inview);
+    });
     
 });

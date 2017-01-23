@@ -1,6 +1,11 @@
 @media screen and (max-width:500px){
+
+
     .pg1-section1 {
         align-items: center;
+        h1 {
+            text-align: center;
+        }
         p {
             width: 100%;
             text-align: center;
@@ -147,6 +152,7 @@
         }
         .btn-a {
             width: 50%;
+            
         }
         .contact-inline {
             width: 94%;
