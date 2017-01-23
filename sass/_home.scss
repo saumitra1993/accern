@@ -86,8 +86,11 @@
     
     h4{
         font-weight: 400;
+        text-align: center;
     }
-    
+    h2 {
+        text-align: center;
+    }
     
     
     i{
@@ -127,7 +130,20 @@
     }
     
     
+    .info-container{
+        display: flex;
+        margin-left: 1%;
+        //margin-top: 3%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width:50%;
+    }
     
+    button.accordion{
+        @include fontsize(18px,$document-fontsize);
+        font-weight: 400;
+    }
     
 }
 
@@ -154,6 +170,21 @@
         position: relative;
         left: 100%;
         margin-left: -200%;
+    }
+    
+    .info-container{
+        display: flex;
+        margin-left: 1%;
+        //margin-top: 3%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width:50%;
+    }
+    
+    button.accordion{
+        @include fontsize(18px,$document-fontsize);
+        font-weight: 400;
     }
     
     h2{
@@ -186,7 +217,7 @@
     }
     contactus-form {
         width:70%;
-        flex-basis: 50%;
+        flex-basis: 40%;
     }
 
 }

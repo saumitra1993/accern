@@ -1,17 +1,21 @@
 <header>
     <h1 class="logo">Accern</h1>
     <nav>
-        <ul>
-            <li><a href="#!/">Home</a></li>
-            <li class="separator">&nbsp;<a>&nbsp;</a></li>
-            <li><a href="#!/company">Company</a></li>
-            <li class="separator">&nbsp;<a>&nbsp;</a></li>
-            <li><a href="#!/resources">Resources</a></li>
-            <li class="separator">&nbsp;<a>&nbsp;</a></li>
-            <li><a href="#!/contact">Contact</a></li>
-            <li class="separator">&nbsp;<a>&nbsp;</a></li>
+        <ul class="topnav" ng-class="{'responsive':setResponsive}">
+            <li class="icon">
+                <a ng-click="setResponsive = !setResponsive">&#9776;</a>
+            </li>
+            <li><a ng-click="setResponsive = !setResponsive" href="#!/">Home</a></li>
+            <li ng-hide="setResponsive" class="separator">&nbsp;<a>&nbsp;</a></li>
+            <li><a ng-click="setResponsive = !setResponsive" href="#!/company">Company</a></li>
+            <li ng-hide="setResponsive" class="separator">&nbsp;<a>&nbsp;</a></li>
+            <li><a ng-click="setResponsive = !setResponsive" href="#!/resources">Resources</a></li>
+            <li ng-hide="setResponsive" class="separator">&nbsp;<a>&nbsp;</a></li>
+            <li><a ng-click="setResponsive = !setResponsive" href="#!/contact">Contact</a></li>
+            <li ng-hide="setResponsive" class="separator">&nbsp;<a>&nbsp;</a></li>
             <li><a>Login</a></li>
             <li><a><i class="fa fa-search" aria-hidden="true"></i></a></li>
+            
         </ul>
     </nav>
 

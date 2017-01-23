@@ -165,11 +165,10 @@ p {
 
 
 header{
-    align-items: center;
+    align-items: flex-start;
     display:flex;
     flex-direction: row;
     justify-content: flex-start;
-    
     position: absolute;
     
     top:0;
@@ -224,6 +223,8 @@ header{
         li:last-child{
             margin-right: 1%;
         }
+        
+        li.icon {display: none;}
 
         .separator {
 

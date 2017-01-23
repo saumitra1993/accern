@@ -3,6 +3,104 @@
         align-items: center;
         p {
             width: 100%;
+            text-align: center;
         }
     }
+    
+    .pg1-section2 {
+        p {
+            width: 95%;
+            text-align: center;
+        }
+        .features-container {
+            flex-direction: column;
+        }
+        .feature-container {
+            width:95%;
+        }
+    }
+    
+    .pg1-section3 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .info-container {
+            width: 100%;
+            text-align: center;
+            align-items: center
+        }
+        
+    }
+    
+    .pg1-section4 {
+        //flex-direction: column;
+       // justify-content: center;
+        .feature-img-container{
+            width: 100%;
+            height: 50vh;
+            margin-bottom: 2%;
+            margin-top: 5%;
+        }
+        align-items: center;
+        flex-wrap: wrap-reverse;
+        .info-container {
+            width: 100%;
+            text-align: center;
+            align-items: center
+        }
+        
+    }
+    
+    .pg1-section5{
+        h2{
+            text-align: center;
+        }
+        p {
+            text-align: center;
+        }
+        
+        contactus-form {
+            margin-top: 5%;
+            width:90%;
+            flex-basis: 30%;
+            
+        }
+        
+        .btn-a {
+            width: 30%;
+        }
+    }
+}
+
+@media screen and (max-width:680px) {
+    ul.topnav li {display: none;}
+    ul.topnav {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+    ul.topnav li.icon {
+    
+        display: block;
+    }
+}
+
+@media screen and (max-width:680px) {
+  
+  ul.topnav.responsive {
+      
+      li {
+          background-color: black;
+          width: 100%;
+          display: block;
+          float: none;
+      }
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: center;
+  }
+
+    
 }

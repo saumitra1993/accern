@@ -19,20 +19,7 @@
     
     display: flex;
     flex-direction: column;
-    .info-container{
-        display: flex;
-        margin-left: 1%;
-        //margin-top: 3%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        width:50%;
-    }
     
-    button.accordion{
-        @include fontsize(18px,$document-fontsize);
-        font-weight: 400;
-    }
 }
 
 @mixin boxed-section {
