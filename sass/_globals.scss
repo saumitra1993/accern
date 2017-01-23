@@ -15,6 +15,7 @@ input {
 html{
     font-size: $document-fontsize;
     font-family: 'Poppins', sans-serif;
+    width: 100%;
 }
 body{
     margin:0;
@@ -240,7 +241,8 @@ header{
     }
 
     &.background {
-        background-color: #000000;
+        background-color: #181818;
+        border-bottom: 1px solid white;
     }
     
 
