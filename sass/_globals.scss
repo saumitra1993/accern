@@ -151,13 +151,15 @@ p {
 
     }
     .btn-a {
-        width: 20%;
+        width: 30%;
     }
     
     .input-container {
         width:100%;
+        margin-bottom: 10%;
     }
     .contact-message {
+        margin-top: auto;
         width: 94%;
     }
     .contact-inline {
@@ -168,7 +170,7 @@ p {
 
 
 header{
-    align-items: flex-start;
+    align-items: center;
     display:flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -185,7 +187,7 @@ header{
     
     .logo {
     
-
+        align-self: flex-start;
         background-image: url('../images/accernlogosquare-4.png');
         background-repeat: no-repeat;
         background-size: contain;
@@ -213,7 +215,7 @@ header{
             padding: 12px;
             transform-origin: center;
 
-            &:after {
+            &:not(.icon):after {
               display:block;
               content: '';
               border-bottom: solid 2px white;  

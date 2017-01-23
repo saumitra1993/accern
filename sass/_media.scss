@@ -76,11 +76,9 @@
         }
     }
         
-    .pg2-section1{
-        h1{
-            text-align: center;
-        }
-    }
+    
+    
+    
 }
 
 
@@ -100,14 +98,19 @@
 }
 
 @media screen and (max-width:680px) {
+    
+    
   
     ul.topnav.responsive {
-
+      
+    
+        
       li {
-          background-color: black;
+          background-color: #181818;
           width: 100%;
           display: block;
           float: none;
+          border-bottom: 1px solid white;
       }
     }
     ul.topnav.responsive li a {
@@ -129,12 +132,12 @@
         .resource {
             width: 80%;
             height: 20vh;
-            
+
         }
         .resources:last-child {
             margin-bottom: 10%;
         }
-        
+
         .download-btn {
             position: absolute;
             bottom: 5%;
@@ -142,7 +145,11 @@
             opacity: 1;
             @include fontsize(14px);
         }
+        
     }
+    
+    
+    
     
     .pg4-section1 {
         align-items: center;
@@ -151,17 +158,106 @@
     .contact-us-form {
         .inline-container {
             flex-direction: column;
-            height:50%;
+            justify-content: space-between;
+            height:70%;
             
         }
         .btn-a {
             width: 50%;
-            
+            margin-bottom: 40%;
         }
         .contact-inline {
             width: 94%;
         }
     }
-
     
+    .pg2-section1{
+        h1{
+            text-align: center;
+            width: 100%;
+        }
+    }
+    
+    .pg2-section2 {
+        flex-direction: column;
+        .content-container1{
+            width: 80%;
+            margin-bottom: 3%;
+        }
+        .content-container2{
+            width: 80%;
+        }
+        .btn-c {
+            margin-bottom: 30%;
+        }
+    }
+    
+    .pg2-section3 {
+        h2 {
+            text-align: center;
+        }
+        h5 {
+            text-align: center;
+        }
+        h6 {
+            text-align: center;
+        }
+        .process-container {
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 10%;
+        }
+        
+        .process {
+            flex-direction: column;
+        }
+        .process-head {
+            flex-direction: column;
+        }
+        
+        .line {
+            width: 0;
+            height: 5%;
+            margin-left: 1px dashed white;
+        }
+    }
+    
+    
+}
+
+@media screen and (max-width:850px){
+    
+    .pg2-section4 {
+        h2 {
+            margin-top: 20%;
+            text-align: center;
+            width: 95%;
+        }
+        
+        .partner-logo {
+            width:150px;
+            height: auto;
+        }
+        
+        .resources {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-wrap:wrap;
+        }
+        .resource {
+            width: 80%;
+            height: 20vh;
+
+        }
+        
+
+        .download-btn {
+            position: absolute;
+            bottom: 5%;
+            text-align: center;
+            opacity: 1;
+            @include fontsize(14px);
+        }
+    }
 }
