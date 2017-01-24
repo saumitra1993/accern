@@ -88,7 +88,7 @@
         margin-bottom: 20%;
     }
     
-    .resources-container:nth-child(2n-1) {
+    .resources-container:nth-child(odd) {
         .resource:nth-child(2n-1) {
             background-color: #181818;
         }
@@ -100,7 +100,7 @@
         }
     }
     
-    .resources-container:nth-child(2n){
+    .resources-container:nth-child(even){
         .resource:nth-child(2n) {
             background-color: #181818;
         }

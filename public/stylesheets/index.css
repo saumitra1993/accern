@@ -55,6 +55,9 @@ h5 {
 p {
   font-size: 0.9375em; }
 
+button:focus {
+  outline: 0; }
+
 .btn-a {
   padding: 15px 25px 15px 25px;
   font-size: 1em;
@@ -150,8 +153,9 @@ p {
     width: 80%; }
   .contact-us-form .feedback {
     width: 94%;
-    background-color: whitesmoke;
-    color: #181818;
+    background-color: black;
+    border: 1px solid white;
+    color: white;
     margin-bottom: 5%;
     align-self: flex-start; }
     .contact-us-form .feedback p {
@@ -159,8 +163,7 @@ p {
       display: inline-block; }
     .contact-us-form .feedback .close {
       float: right;
-      margin-right: 1%;
-      color: black; }
+      margin-right: 1%; }
   .contact-us-form .shake {
     animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
     transform: translate3d(0, 0, 0);
@@ -664,17 +667,17 @@ div.panel {
     position: relative; }
   .pg2-section4 .resources-container:last-child {
     margin-bottom: 20%; }
-  .pg2-section4 .resources-container:nth-child(2n-1) .resource:nth-child(2n-1) {
+  .pg2-section4 .resources-container:nth-child(odd) .resource:nth-child(2n-1) {
     background-color: #181818; }
-  .pg2-section4 .resources-container:nth-child(2n-1) .resource:nth-child(2n) {
+  .pg2-section4 .resources-container:nth-child(odd) .resource:nth-child(2n) {
     background-color: #202020; }
-  .pg2-section4 .resources-container:nth-child(2n-1) .resource:hover {
+  .pg2-section4 .resources-container:nth-child(odd) .resource:hover {
     background-color: #f24e4e; }
-  .pg2-section4 .resources-container:nth-child(2n) .resource:nth-child(2n) {
+  .pg2-section4 .resources-container:nth-child(even) .resource:nth-child(2n) {
     background-color: #181818; }
-  .pg2-section4 .resources-container:nth-child(2n) .resource:nth-child(2n-1) {
+  .pg2-section4 .resources-container:nth-child(even) .resource:nth-child(2n-1) {
     background-color: #202020; }
-  .pg2-section4 .resources-container:nth-child(2n) .resource:hover {
+  .pg2-section4 .resources-container:nth-child(even) .resource:hover {
     background-color: #f24e4e; }
   .pg2-section4 .download-btn {
     position: absolute;
@@ -776,17 +779,17 @@ div.panel {
     position: relative; }
   .pg3-section2 .resources-container:last-child {
     margin-bottom: 20%; }
-  .pg3-section2 .resources-container:nth-child(2n-1) .resource:nth-child(2n-1) {
+  .pg3-section2 .resources-container:nth-child(odd) .resource:nth-child(2n-1) {
     background-color: #181818; }
-  .pg3-section2 .resources-container:nth-child(2n-1) .resource:nth-child(2n) {
+  .pg3-section2 .resources-container:nth-child(odd) .resource:nth-child(2n) {
     background-color: #202020; }
-  .pg3-section2 .resources-container:nth-child(2n-1) .resource:hover {
+  .pg3-section2 .resources-container:nth-child(odd) .resource:hover {
     background-color: #f24e4e; }
-  .pg3-section2 .resources-container:nth-child(2n) .resource:nth-child(2n) {
+  .pg3-section2 .resources-container:nth-child(even) .resource:nth-child(2n) {
     background-color: #181818; }
-  .pg3-section2 .resources-container:nth-child(2n) .resource:nth-child(2n-1) {
+  .pg3-section2 .resources-container:nth-child(even) .resource:nth-child(2n-1) {
     background-color: #202020; }
-  .pg3-section2 .resources-container:nth-child(2n) .resource:hover {
+  .pg3-section2 .resources-container:nth-child(even) .resource:hover {
     background-color: #f24e4e; }
   .pg3-section2 .download-btn {
     position: absolute;

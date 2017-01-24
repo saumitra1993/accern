@@ -64,6 +64,12 @@ p {
     @include fontsize(15px);
 }
 
+button {
+    &:focus {
+        outline: 0;
+    }
+}
+
 .btn-a {
     @include button;
     border: 1px solid $color-base;
@@ -71,10 +77,11 @@ p {
     background: $color-base;
     z-index: 1;
     @include fontsize(14px); 
-
+    
     &:hover{
         background: linear-gradient(to right, darken($color-base,6%), darken($color-base,4%));
     }
+    
 }
 
 .btn-b {
@@ -89,6 +96,7 @@ p {
         background: white;
         color:black;
     }
+    
 }
 
 .btn-c {
@@ -104,6 +112,7 @@ p {
         background: $color-base;
         color:white;
     }
+    
 }
 
 .input-container {
@@ -178,8 +187,9 @@ p {
     
     .feedback {
         width: 94%;
-        background-color: whitesmoke;
-        color: #181818;
+        background-color: black;
+        border: 1px solid white;
+        color: white;
         margin-bottom: 5%;
         align-self: flex-start;
         p {
@@ -189,7 +199,7 @@ p {
         .close {
             float: right;
             margin-right: 1%;
-            color: black;
+            
         }
     }
     
