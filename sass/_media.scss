@@ -76,7 +76,12 @@
         }
     }
         
-    
+    footer {
+        span {
+            margin-right: none;
+            @include fontsize(10px);
+        }
+    }
     
     
 }
