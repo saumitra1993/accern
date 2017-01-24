@@ -1,11 +1,19 @@
-angular.module("accern").controller("resourcesController", function($scope,appfactory,$q,$routeParams){
+angular.module("accern").controller("resourcesController", function($scope,appfactory,$window,$q,$routeParams){
     
     
-    $scope.visibilityChange = function(inview){
+    if($window.innerWidth <= 480){
         
-        $scope.$emit('section-out-of-view',inview);
+        $scope.$emit('section-out-of-view',false);
+        $scope.visibilityChange = function(inview){
+        };
+    }
+    else{
+        $scope.visibilityChange = function(inview){
         
-    }; 
+            $scope.$emit('section-out-of-view',inview);
+
+       }; 
+    }
     
     
 });

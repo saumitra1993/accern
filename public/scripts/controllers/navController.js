@@ -8,4 +8,9 @@ angular.module("accern").controller("navController", function($scope,appfactory,
     	//console.log(inview);
     });
     
+    $scope.setResponsiveFlag = function(setResponsive){
+        if(setResponsive == true) {
+            $scope.setResponsive = false;
+        } 
+    };
 });

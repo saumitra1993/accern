@@ -1,12 +1,20 @@
 angular.module("accern").controller("homeController", function($scope,appfactory,$q,$routeParams,$window, $animate){
     
-   $scope.visibilityChange = function(inview){
-        
-        $scope.$emit('section-out-of-view',inview);
-        
-   }; 
+   
     
-    
+    if($window.innerWidth <= 480){
+        
+        $scope.$emit('section-out-of-view',false);
+        $scope.visibilityChange = function(inview){
+        };
+    }
+    else{
+        $scope.visibilityChange = function(inview){
+        
+            $scope.$emit('section-out-of-view',inview);
+
+       }; 
+    }
     
         
     var acc = document.getElementsByClassName("accordion");
