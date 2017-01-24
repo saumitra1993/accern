@@ -64,6 +64,6 @@ Note:-
     
     3) The contact us form has validations and has been mapped to an API that just returns the thank you message.
 
-
+    4) Project tested thoroughly on Google Chrome. Minor eccentricities might exist for Safari.
 
 
