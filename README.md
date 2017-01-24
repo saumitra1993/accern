@@ -51,13 +51,13 @@ External libraries used -
     
     3) Angular-inview (directive to notify when a section is inside/outside the viewport
     
-    4) The Zendesk embeddable code enabling the widget. (the Support button at bottom-right
+    4) The Zendesk embeddable code enabling the widget. (the Support button at bottom-right)
     
     
     
 Note:- 
     
-    1) The tabs "Home","Company","Resources" and "Contact" has been covered. The login tab was leading on a different layout and hence not covered.
+    1) The tabs "Home","Company","Resources" and "Contact" have been covered. The login tab was leading on a different layout and hence not covered.
     
     2) The download links and external links are not wired to their respective locations since it seemed unnecessary. 
     
