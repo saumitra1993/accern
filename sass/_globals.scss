@@ -16,6 +16,7 @@ html{
     font-size: $document-fontsize;
     font-family: 'Poppins', sans-serif;
     width: 100%;
+    overflow-x: hidden;
 }
 body{
     margin:0;

@@ -14,7 +14,8 @@ input {
 html {
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
-  width: 100%; }
+  width: 100%;
+  overflow-x: hidden; }
 
 body {
   margin: 0;
@@ -306,7 +307,12 @@ div.panel {
   padding: 0;
   position: relative;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
@@ -351,7 +357,12 @@ div.panel {
   padding: 0;
   position: relative;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   background-color: black;
   justify-content: flex-start;
@@ -393,7 +404,12 @@ div.panel {
   padding: 0;
   position: relative;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   flex-direction: row;
   background-color: #0e0e0e;
@@ -424,7 +440,12 @@ div.panel {
   padding: 0;
   position: relative;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   flex-direction: row;
   background-color: #000000;
@@ -467,7 +488,12 @@ div.panel {
   padding: 0;
   position: relative;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   background-color: black;
   padding-top: 2%;
@@ -484,7 +510,12 @@ div.panel {
   padding: 0;
   position: relative;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -520,7 +551,12 @@ div.panel {
   padding: 0;
   position: relative;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   background-color: black;
   padding-top: 2%;
@@ -559,7 +595,12 @@ div.panel {
   padding: 0;
   position: relative;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   background-color: #0e0e0e;
   padding-top: 2%;
@@ -622,7 +663,12 @@ div.panel {
   padding: 0;
   position: relative;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   background-color: black;
   padding-top: 2%;
@@ -646,6 +692,7 @@ div.panel {
     font-size: 1.25em; }
   .pg2-section4 .resources-container {
     width: 96%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start; }
@@ -697,7 +744,12 @@ div.panel {
   padding: 0;
   position: relative;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -736,7 +788,12 @@ div.panel {
   padding: 0;
   position: relative;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   background-color: black;
   padding-top: 2%;
@@ -760,6 +817,7 @@ div.panel {
     font-size: 1.25em; }
   .pg3-section2 .resources-container {
     width: 96%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start; }
@@ -808,7 +866,12 @@ div.panel {
   padding: 0;
   position: relative;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -846,7 +909,12 @@ div.panel {
   padding: 0;
   position: relative;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   background-color: black;
   padding-top: 2%;
@@ -961,9 +1029,11 @@ div.panel {
     margin-bottom: 40%; }
   .contact-us-form .contact-inline {
     width: 94%; }
-  .pg2-section1 h1 {
-    text-align: center;
-    width: 100%; }
+  .pg2-section1 {
+    height: 100vh; }
+    .pg2-section1 h1 {
+      text-align: center;
+      width: 100%; }
   .pg2-section2 {
     flex-direction: column; }
     .pg2-section2 .content-container1 {
@@ -1008,12 +1078,13 @@ div.panel {
       width: 150px;
       height: auto; }
     .pg2-section4 .resources-container {
+      height: 150vh;
       margin-bottom: 20%; }
     .pg2-section4 .resources {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      flex-wrap: wrap; }
+      height: 100vh; }
     .pg2-section4 .resource {
       width: 80%;
       height: 40vh; }
