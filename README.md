@@ -25,8 +25,9 @@ Now, let's go to "index.ejs" present inside the views folder -
 
         1) navbar - It's a custom directive that has its own controller at public/scripts/controllers/navController.js and 
                     template at public/templates/navbar.html.
-        2) ng-view - It's the container where the routes are dynamically injected as the user navigates across the site. Go to the
-                     file public/scripts/app.js. This file decides which template and controller will be injected depending on the  route.   
+                    
+        2) ng-view - It's the container where the routes are dynamically injected as the user navigates across the site. Go to the file public/scripts/app.js. This file decides which template and controller will be injected depending on the  route.
+        
         3) footer-custom - Another custom directive with controller at public/scripts/controllers/footerController.js and template at public/templates/footer.html
         
 From "app.js", all the different routes and their respective controllers can be traced. 
@@ -61,6 +62,7 @@ Note:-
     
     2) The download links and external links are not wired to their respective locations since it seemed unnecessary. 
     
+    3) The contact us form has validations and has been mapped to an API that just returns the thank you message.
 
 
 
