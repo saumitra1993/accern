@@ -1,4 +1,4 @@
-angular.module('accern', ['ngRoute','angular-inview'])
+angular.module('accern', ['ngRoute','angular-inview','ngAnimate'])
 .config(function($locationProvider,$routeProvider){
     
     $routeProvider

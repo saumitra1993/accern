@@ -115,11 +115,16 @@ p {
     position: absolute;
     pointer-events: none;
     left: 10px;
-    top: -2px;
+    top: -3px;
     color: white;
     transition: 0.2s ease all; }
-    .input-container .floating-label.hide-label {
-      display: none; }
+    .input-container .floating-label.stay-label {
+      top: -18px;
+      left: 0px;
+      font-size: 0.75em;
+      opacity: 1; }
+  .input-container input.error {
+    border-bottom: 1px solid #f24e4e; }
 
 .contact-us-form {
   display: flex;
@@ -133,7 +138,8 @@ p {
     flex-direction: row;
     justify-content: space-between; }
   .contact-us-form .btn-a {
-    width: 30%; }
+    width: 30%;
+    margin-bottom: 20%; }
   .contact-us-form .input-container {
     width: 100%;
     margin-bottom: 10%; }
@@ -142,6 +148,33 @@ p {
     width: 94%; }
   .contact-us-form .contact-inline {
     width: 80%; }
+  .contact-us-form .feedback {
+    width: 94%;
+    background-color: whitesmoke;
+    color: #181818;
+    margin-bottom: 5%;
+    align-self: flex-start; }
+    .contact-us-form .feedback p {
+      margin-left: 2%;
+      display: inline-block; }
+    .contact-us-form .feedback .close {
+      float: right;
+      margin-right: 1%;
+      color: black; }
+  .contact-us-form .shake {
+    animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden; }
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0); }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0); }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0); } }
 
 header {
   align-items: center;
@@ -440,7 +473,7 @@ div.panel {
   .pg1-section5 h2 {
     flex-basis: 10%; }
   .pg1-section5 p {
-    flex-basis: 10%; }
+    margin-bottom: 10%; }
   .pg1-section5 contactus-form {
     width: 70%; }
 

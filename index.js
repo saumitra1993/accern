@@ -28,7 +28,11 @@ app.use(sassMiddleware({
 app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', function (req, res) {
   res.render('index');
-})
+});
+
+app.post('/contact', function (req, res) {
+  res.json({message:"Thank you for reaching out to us. We will get back to you within 3 hours."});
+});
 app.listen(process.env.PORT || 3000, function () {
   console.log('Example app listening on port 3000!')
 });
