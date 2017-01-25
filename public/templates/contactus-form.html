@@ -1,24 +1,40 @@
 <form class="contact-us-form" novalidate name="contactUsForm" ng-submit=" contactUsForm.$valid && submit(name,email,subject,email)" autocomplete="off">
     <div class="feedback" ng-show="feedback_message != ''"><p>{{feedback_message}}</p><a class="close" ng-click="feedback_message = ''"><i class="fa fa-times" aria-hidden="true"></i></a></div>
     <div class="inline-container">
+        
         <div class="input-container">
-            <input ng-model="name" name="name" type="text" ng-class="{'error':(!contactUsForm.name.$valid && (contactUsForm.name.$touched || contactUsForm.$submitted) ) }"  class="contact-inline" required />
-            <span ng-class = "{'stay-label' : name != null}" class="floating-label">{{name_label}}</span>
+            <div>
+                <input ng-model="name" name="name" type="text" ng-class="{'error':(!contactUsForm.name.$valid && (contactUsForm.name.$touched || contactUsForm.$submitted) ) }"  class="contact-inline" required />
+                <span ng-class = "{'stay-label' : name != null}" class="floating-label">{{name_label}}</span>
+            </div>
         </div>
+        
 
+        
         <div class="input-container">
-            <input ng-model="email" name="email" ng-class="{'error':(contactUsForm.email.$touched || contactUsForm.$submitted)  && !contactUsForm.email.$valid}" type="email" class="contact-inline" required />
-            <span ng-class = "{'stay-label' : contactUsForm.email.$dirty}" class="floating-label">{{email_label}}</span>
+            <div>
+                <input ng-model="email" name="email" ng-class="{'error':(contactUsForm.email.$touched || contactUsForm.$submitted)  && !contactUsForm.email.$valid}" type="email" class="contact-inline" required />
+                <span ng-class = "{'stay-label' : contactUsForm.email.$dirty}" class="floating-label">{{email_label}}</span>
+            </div>
         </div>
+        
 
+        
         <div class="input-container">
-            <input ng-model="subject" name="subject" ng-class="{'error':(contactUsForm.subject.$touched || contactUsForm.$submitted) && !contactUsForm.subject.$valid}"  type="text" class="contact-inline" required />
-            <span class="floating-label" ng-class = "{'stay-label': subject != null}" >{{subject_label}}</span>
+            <div>
+                <input ng-model="subject" name="subject" ng-class="{'error':(contactUsForm.subject.$touched || contactUsForm.$submitted) && !contactUsForm.subject.$valid}"  type="text" class="contact-inline" required />
+                <span class="floating-label" ng-class = "{'stay-label': subject != null}" >{{subject_label}}</span>
+            </div>
         </div>
+        
     </div>
+    
     <div class="input-container">
-        <input type="text" ng-model="message" name="message" ng-class="{'error':(contactUsForm.message.$touched || contactUsForm.$submitted) && !contactUsForm.message.$valid}"  class="contact-message" required />
-        <span class="floating-label" ng-class = "{'stay-label' : message != null}">{{message_label}}</span>
+        <div>
+            <input type="text" ng-model="message" name="message" ng-class="{'error':(contactUsForm.message.$touched || contactUsForm.$submitted) && !contactUsForm.message.$valid}"  class="contact-message" required />
+            <span class="floating-label" ng-class = "{'stay-label' : message != null}">{{message_label}}</span>
+        </div>
     </div>
+    
     <button id="form-submit-btn" type="submit" class="btn-a" ng-class="{'shake':contactUsForm.$submitted && !contactUsForm.$valid}" >Send</button>
 </form>

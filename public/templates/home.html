@@ -46,12 +46,14 @@
     <div class="info-container">
         <h2>Get Tradable Alerts </h2>
         <p>Use our web application to get early news on over 8,000 U.S. public equities sourced from over 300 million news websites, blogs, and social media feeds such as Twitter. With easy–to-use features, you can get set up in minutes and start trading on custom news alerts we deliver to you.</p>
-        <button class="accordion"><i class="fa fa-chevron-right acc-pointer" aria-hidden="true"></i> Trade On Early News</button>
-        <div class="panel">
-          <p>Our massive coverage of 300 million websites allows us to find and deliver early stories on U.S. public equities to our customers.</p>
+        <div class="accordion-container" ng-repeat="feature in features1" ng-init="feature.open = false">
+            <button class="accordion" ng-click="feature.open = !feature.open"><div><i class="fa fa-chevron-right acc-pointer" ng-class="{'down':feature.open}" aria-hidden="true"></i> {{feature.head}}</div></button>
+            <div class="panel" ng-class="{'active':feature.open}" expand-accordion-panel="feature.open">
+              <p>{{feature.description}}</p>
+            </div>
         </div>
-        
-        <button class="accordion"><i class="fa fa-chevron-right acc-pointer" aria-hidden="true"></i> Build Custom Alerts</button>
+
+        <!-- <button class="accordion"><i class="fa fa-chevron-right acc-pointer" aria-hidden="true"></i> Build Custom Alerts</button>
         <div class="panel">
           <p>Our app allows you to build custom news alerts geared specifically towards your trading strategy. If requested, we can even help you build them.</p>
         </div>
@@ -59,7 +61,7 @@
         <button class="accordion"><i class="fa fa-chevron-right acc-pointer" aria-hidden="true"></i> Use Trading Analytics</button>
         <div class="panel">
           <p>We derive analytics such as sentiment, impact, news exposure, news reliability rankings, and much more from each article.</p>
-        </div>
+        </div> -->
         
         <button class="btn-a"><i class="fa fa-arrow-right" aria-hidden="true"></i> Try Web App</button>
     </div>
@@ -72,21 +74,15 @@
     <div class="info-container">
         <h2>Largest News Sentiment API Feed </h2>
         <p>Use our low-latency news sentiment API feed to build custom trading strategies or integrate it with your existing strategies. With over 300 million news websites, blogs, and social media websites, such as Twitter, monitored in real-time, we extract article meta data, company and events information, and derived trading analytics per article for our institutional customers.</p>
-        
-        <button class="accordion"><i class="fa fa-chevron-right acc-pointer" aria-hidden="true"></i> Flexible Low-Latency API Feed</button>
-        <div class="panel">
-          <p>Our push-based low-latency JSON API feed can aggregate data based on specific time frames or filter data based on companies.</p>
+
+        <div class="accordion-container" ng-repeat="feature in features2" ng-init="feature.open = false">
+            <button class="accordion" ng-click="feature.open = !feature.open"><div><i class="fa fa-chevron-right acc-pointer" ng-class="{'down':feature.open}" aria-hidden="true"></i> {{feature.head}}</div></button>
+            <div class="panel" expand-accordion-panel="feature.open" ng-class="{'active':feature.open}">
+              <p>{{feature.description}}</p>
+            </div>
         </div>
         
-        <button class="accordion"><i class="fa fa-chevron-right acc-pointer" aria-hidden="true"></i> API Data Fields</button>
-        <div class="panel">
-          <p>Our API data feed includes article metadata such as URLs, events, companies, and derived analytics such as sentiment.</p>
-        </div>
         
-        <button class="accordion"><i class="fa fa-chevron-right acc-pointer" aria-hidden="true"></i> 4 Years Of History</button>
-        <div class="panel">
-          <p>We have over four years of historical data, which includes article headlines and URLs. Historical data are provided upon request.</p>
-        </div>
         
         <button class="btn-b"><i class="fa fa-key" aria-hidden="true"></i> Request API</button>
         

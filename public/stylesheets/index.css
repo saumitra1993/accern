@@ -160,8 +160,9 @@ button:focus {
     width: 30%;
     margin-bottom: 20%; }
   .contact-us-form .input-container {
-    width: 100%;
-    padding-bottom: 10%; }
+    width: 100%; }
+    .contact-us-form .input-container div {
+      padding-bottom: 20%; }
   .contact-us-form .contact-message {
     margin-top: auto;
     width: 94%; }
@@ -282,19 +283,23 @@ footer {
     margin-right: 3%;
     font-size: 0.75em; }
 
+.accordion-container {
+  width: 100%; }
+
 button.accordion {
   color: rgba(255, 255, 255, 0.7);
   background: none;
   cursor: pointer;
-  padding: 4%;
   width: 100%;
   text-align: left;
   border-top: 1px solid rgba(210, 210, 210, 0.6);
   border-left: none;
   border-right: none;
   border-bottom: none;
-  outline: none;
-  transition: 0.4s; }
+  outline: none; }
+  button.accordion div {
+    padding: 4%;
+    transition: 0.4s; }
   button.accordion .acc-pointer {
     -moz-transition: all 0.2s linear;
     -webkit-transition: all 0.2s linear;
@@ -313,7 +318,9 @@ div.panel {
   background-color: none;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out; }
+  -moz-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear; }
   div.panel p {
     color: rgba(241, 241, 241, 0.7);
     font-size: 0.9375em; }
