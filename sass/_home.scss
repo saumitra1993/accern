@@ -9,8 +9,9 @@
         bottom:-20vh;
     }
     
-    justify-content: flex-end;
-    align-items: flex-start;
+    @include main-axis-flex-end;
+    @include cross-axis-flex-start;
+    
     height: 100vh;
     z-index: -1;
     padding-left: 2%;
@@ -51,9 +52,10 @@
 .pg1-section2 {
     @include section;
     background-color: black;
-    justify-content:flex-start;
-    align-items: center;
-    top:0vh;
+    @include main-axis-flex-start;
+    @include cross-axis-center;
+    
+    
     z-index: 1;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -64,8 +66,7 @@
     }
     
     .features-container{
-        display: flex;
-        flex-direction: row;
+        @include flex-row
         width: 100%;
         //flex-wrap: wrap;
         
@@ -77,11 +78,10 @@
     }
     
     .feature-container{
-        display: flex;
-        //flex-wrap: wrap;
-        flex-direction: column;
-        justify-content:flex-start;
-        align-items: center;
+        @include flex-column;
+        @include main-axis-flex-start;
+        @include cross-axis-center;
+        
     }
     
     h4{
@@ -105,11 +105,12 @@
 
 .pg1-section3 {
     @include section;
-    flex-direction: row;
+    
     background-color: #0e0e0e;
-
-    justify-content: flex-start;
-    align-items: center;
+    @include flex-row;
+    @include main-axis-flex-start;
+    @include cross-axis-center;
+    
     padding-left: 0;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -131,12 +132,13 @@
     
     
     .info-container{
-        display: flex;
+        
         margin-left: 1%;
         //margin-top: 3%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+        @include flex-column;
+        @include main-axis-center;
+        @include cross-axis-flex-start;
+        
         width:50%;
     }
     
@@ -149,11 +151,12 @@
 
 .pg1-section4 {
     @include section;
-    flex-direction: row;
+    @include flex-row;
     background-color: #000000;
     position: relative;
-    justify-content: flex-start;
-    align-items: center;
+    @include main-axis-flex-start;
+    @include cross-axis-center;
+    
     padding-left: 0;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -176,9 +179,9 @@
         display: flex;
         margin-left: 1%;
         //margin-top: 3%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+        @include flex-column;
+        @include main-axis-center;
+        @include cross-axis-flex-start;
         width:50%;
     }
     
@@ -206,13 +209,15 @@
     @include section;
     background-color: black;
     padding-top: 2%;
-    justify-content:center;
-    align-items: center;
+            
+    @include main-axis-center;
+    @include cross-axis-center;
+    
     h2{
         flex-basis: 10%;
     }
     p{
-        margin-bottom: 10%;
+        padding-bottom: 10%;
     }
     contactus-form {
         width:70%;

@@ -16,7 +16,7 @@ html{
     font-size: $document-fontsize;
     font-family: 'Poppins', sans-serif;
     width: 100%;
-    overflow-x: hidden;
+    
 }
 body{
     margin:0;
@@ -155,17 +155,15 @@ button {
 
 .contact-us-form {
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-column;
+    @include main-axis-space-between;
+    @include cross-axis-center;
+    
     height:100%;
     .inline-container{
         width: 100%;
-
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        @include flex-row;
+        @include main-axis-space-between;
 
     }
     .btn-a {
@@ -176,7 +174,7 @@ button {
     
     .input-container {
         width:100%;
-        margin-bottom: 10%;
+        padding-bottom: 10%;
     }
     .contact-message {
         margin-top: auto;

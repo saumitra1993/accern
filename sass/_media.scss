@@ -1,3 +1,12 @@
+@media screen and (min-color-index:0) and (-webkit-min-device-pixel-ratio:0) 
+{ 
+    html { 
+        overflow-x: hidden;
+
+    }
+}
+
+
 @media screen and (max-width:500px){
 
 
@@ -18,7 +27,7 @@
             text-align: center;
         }
         .features-container {
-            flex-direction: column;
+            @include flex-column;
         }
         .feature-container {
             width:95%;
@@ -26,9 +35,10 @@
     }
     
     .pg1-section3 {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex-column;
+        @include main-axis-center;
+        @include cross-axis-center;
+        
         .info-container {
             width: 100%;
             text-align: center;
@@ -46,12 +56,13 @@
             margin-bottom: 2%;
             margin-top: 5%;
         }
-        align-items: center;
+        @include cross-axis-center;
         flex-wrap: wrap-reverse;
+        
         .info-container {
             width: 100%;
             text-align: center;
-            align-items: center
+            @include cross-axis-center;
         }
         
     }
@@ -91,10 +102,10 @@
 @media screen and (max-width:680px) {
     ul.topnav li {display: none;}
     ul.topnav {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-end;
+        
+        @include flex-column;
+        @include main-axis-flex-start;
+        @include cross-axis-flex-end;
     }
     ul.topnav li.icon {
     
@@ -132,9 +143,10 @@
         }
         
         .resources {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            
+            @include flex-column;
+            @include main-axis-center;
+            @include cross-axis-center;
             flex-wrap:wrap;
         }
         .resource {
@@ -165,8 +177,9 @@
     
     .contact-us-form {
         .inline-container {
-            flex-direction: column;
-            justify-content: space-between;
+            @include flex-column;
+            @include main-axis-space-between;
+            
             height:70%;
             
         }
@@ -215,17 +228,19 @@
             text-align: center;
         }
         .process-container {
-            flex-direction: row;
-            justify-content: center;
+            @include flex-row;
+            @include main-axis-center;
+            
             margin-bottom: 10%;
             margin-top: 20%;
         }
         
         .process {
-            flex-direction: column;
+            @include flex-column;
+        
         }
         .process-head {
-            flex-direction: column;
+            @include flex-column;
         }
         
         .line {
@@ -261,9 +276,9 @@
         }
         
         .resources {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            @include flex-column;
+            @include main-axis-center;
+            @include cross-axis-center;
             height:100vh;
 
         }

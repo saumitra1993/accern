@@ -12,18 +12,92 @@
     outline: none;
 }
 
+@mixin flex-column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+        -ms-flex-direction:column;
+	        flex-direction:column;
+    
+}
+
+@mixin flex-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient:horizontal;
+	-webkit-box-direction:normal;
+	    -ms-flex-direction:row;
+	        flex-direction:row;
+}
+
+@mixin main-axis-center{
+    -webkit-box-pack:center;
+      -ms-flex-pack:center;
+          justify-content:center;
+}
+
+@mixin main-axis-flex-start {
+    -webkit-box-pack:start;
+      -ms-flex-pack:start;
+          justify-content:flex-start;
+}
+
+@mixin main-axis-flex-end {
+    -webkit-box-pack:end;
+      -ms-flex-pack:end;
+          justify-content:flex-end;
+}
+
+@mixin main-axis-space-around {
+    -ms-flex-pack:distribute;
+      justify-content:space-around;
+}
+
+@mixin main-axis-space-between {
+      -webkit-box-pack:justify;
+      -ms-flex-pack:justify;
+          justify-content:space-between;
+}
+
+@mixin cross-axis-center {
+    -webkit-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
+}
+
+@mixin cross-axis-flex-start {
+      -webkit-box-align:start;
+      -ms-flex-align:start;
+          align-items:flex-start;
+}
+
+@mixin cross-axis-flex-end {
+      -webkit-box-align:end;
+      -ms-flex-align:end;
+          align-items:end;
+}
+
+@mixin cross-axis-stretch {
+    -webkit-box-align:stretch;
+      -ms-flex-align:stretch;
+          align-items:stretch;
+}
+
+
+
 @mixin section {
     padding:0;
     position: relative;
     min-height:100vh;
-    
+    -ms-flex-negative:0;
+    flex-shrink:0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+	@include flex-column;
     
 }
 
@@ -33,9 +107,10 @@
     background-color: black;
     padding-top: 2%;
     padding-bottom: 10%;
-    flex-direction: column;
-    justify-content:space-around;
-    align-items: center;
+    
+    @include main-axis-space-around;
+    @include cross-axis-center;
+    
     text-align: center;
     width: 100%;
     position: relative;
@@ -60,19 +135,21 @@
         width: 96%;
         
         height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        @include flex-column;
+        @include main-axis-flex-start;
+        
     }
     
     .resources {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        
+        @include flex-row;
+        @include main-axis-center;
+        
         
         height: 100%;
         width:100%;
-        align-items:stretch;
+        
+        @include cross-axis-stretch;
         
     }
     
@@ -81,11 +158,10 @@
     .resource {
         height: 40vh;
         width: 25%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include flex-row;
+        @include main-axis-center;
+        @include cross-axis-center;
         
-        align-items: center;
         position: relative;
     }
     

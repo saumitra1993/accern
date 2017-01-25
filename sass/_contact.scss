@@ -8,11 +8,12 @@
         height:20vh;
         bottom:-10vh;
     }
+    @include flex-column;
+    @include main-axis-center;
+    @include cross-axis-flex-start;
     
-    justify-content: center;
-    align-items: flex-start;
     padding-left: 2%;
-    flex-direction: column;
+    
     height: 100vh;
     .bg{
         width:inherit;
@@ -38,9 +39,11 @@
     @include section;
     background-color: black;
     padding-top: 2%;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
+    
+    @include flex-column;
+    @include main-axis-center;
+    @include cross-axis-center;
+    
     text-align: center;
     width: 100%;
     

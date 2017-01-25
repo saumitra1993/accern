@@ -8,10 +8,11 @@
         height:20vh;
         bottom:-10vh;
     }
+    @include flex-column;
     
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    @include main-axis-center;
+    @include cross-axis-center;
+    
     height: 100vh;
     .bg{
         width:inherit;
